@@ -1,6 +1,6 @@
 echo "Please enter link of latest ubuntu version:"
 read link
-wget $link -o temp.zip; unzip temp.zip; rm temp.zip
+wget $link -o temp.zip; unzip -o temp.zip; rm temp.zip
 cp /root/Obscured ./obscured-ha/
 cp /root/obscure-service ./walletd-ha/
 forever start /root/obscured-ha/service.js
